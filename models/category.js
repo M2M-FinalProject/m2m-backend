@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Category.hasMany(models.Schedule);
+      Category.hasMany(models.Schedule, {foreignKey: 'CategoryId'});
       Category.hasMany(models.Match, {foreignKey: 'CategoryId'});
     }
   }

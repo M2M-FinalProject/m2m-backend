@@ -85,10 +85,19 @@ List of Available Endpoints:
 
 ```json
 [
-  {
-    "id" : "integer",
-    "name": "string"
-  }
+    {
+        "id": 1,
+        "name": "Football",
+        "createdAt": "2022-10-06T15:46:31.041Z",
+        "updatedAt": "2022-10-06T15:46:31.041Z"
+    },
+    {
+        "id": 2,
+        "name": "Basketball",
+        "createdAt": "2022-10-06T15:46:31.041Z",
+        "updatedAt": "2022-10-06T15:46:31.041Z"
+    },
+    ...
 ]
 ```
 
@@ -120,7 +129,10 @@ List of Available Endpoints:
 ```json
 
 {
-  "access_token": "string"
+    "id": 8,
+    "name": "Run",
+    "updatedAt": "2022-10-06T16:16:07.515Z",
+    "createdAt": "2022-10-06T16:16:07.515Z"
 }
 ```
 
@@ -130,5 +142,115 @@ List of Available Endpoints:
 
 {
   "message": "string"
+}
+```
+
+
+### PUT /categories/:categoryId
+
+#### Description
+
+- Update specified category
+
+#### Request :
+
+- Method : PUT
+- Header :
+    - access_token : string
+- Body :
+
+```json
+
+{
+  "name": "string"
+}
+
+```
+
+#### Response :
+
+200 - OK
+
+```json
+
+{
+    "message": "success updating category"
+}
+```
+
+401 - Unauthorized
+
+```json
+
+{
+  "message": "string"
+}
+```
+
+404 - Not Found
+
+```json
+
+{
+  "message": "Not Found"
+}
+```
+
+### DELETE /categories/:categoryId
+
+#### Description
+
+- Delete specified category
+
+#### Request :
+
+- Method : PUT
+- Header :
+    - access_token : string
+- Body :
+
+```json
+
+{
+  "name": "string"
+}
+
+```
+
+#### Response :
+
+200 - OK
+
+```json
+
+{
+    "message": "success deleting category"
+}
+```
+
+401 - Unauthorized
+
+```json
+
+{
+  "message": "string"
+}
+```
+
+400 - Bad Request
+
+```json
+
+{
+  "message": "This Category is used in registered Schedule or Match"
+}
+```
+
+404 - Not Found
+
+```json
+
+{
+  "message": "Not Found"
 }
 ```
