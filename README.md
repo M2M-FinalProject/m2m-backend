@@ -17,16 +17,16 @@ List of Available Endpoints:
 - `POST /login`
 - `POST /register`
 - `PATCH /verifyUser`
-- `GET /events` (Need Authorization : user)
-- `GET /events/:eventId` (Need Authorization : user)
-- `PATCH /events/:eventId` (Need Authorization : user)
-- `POST /events`  (Need Authorization : user)
+- `GET /matches` (Need Authorization : user)
+- `GET /matches/:matchId` (Need Authorization : user)
+- `PATCH /matches/:matchId` (Need Authorization : user)
+- `POST /matches`  (Need Authorization : user)
 
 - Auth Controller (Refaldy)
 - Category Controller (Inez)
 - Admin Controller (Refaldy)
 - Schedule Controller (Khansa)
-- Event Controller (Mirza)
+- Match Controller (Mirza)
 
 ### POST /admin/login
 
