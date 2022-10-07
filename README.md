@@ -220,7 +220,17 @@ List of Available Endpoints:
   "currentCapacity": 3,
   "status": 1,
   "createdAt": "2022-10-06T15:52:27.422Z",
-  "updatedAt": "2022-10-06T16:47:07.676Z"
+  "updatedAt": "2022-10-06T16:47:07.676Z",
+  "MatchDetails": [
+    {
+      "id": 1,
+      "MatchId": 1,
+      "UserId": 1,
+      "role": "author",
+      "createdAt": "2022-10-06T15:52:27.434Z",
+      "updatedAt": "2022-10-06T15:52:27.434Z"
+    }, ....
+  ]
 }
 ```
 
@@ -231,7 +241,6 @@ List of Available Endpoints:
   "message": "string"
 }
 ```
-
 
 404 - Not Found
 
@@ -318,9 +327,7 @@ List of Available Endpoints:
 ```
 
 404 - Not Found
-
 ```json
-
 {
   "message": "Match not found"
 }

@@ -1,4 +1,4 @@
-const { Match } = require('../models')
+const { Match,MatchDetail } = require('../models')
 
 class MatchController {
     static async getMatches(req, res, next) {
@@ -13,7 +13,7 @@ class MatchController {
     static async getMatchById(req, res, next) {
         try {
             const {matchId} = req.params
-            const data = await Match.findByPk(matchId)
+            const data = await Match.findByPk(matchId, {include : MatchDetail})
             res.status(200).json(data)
         } catch (error) {
             res.send(error)
