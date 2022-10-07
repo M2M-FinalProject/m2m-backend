@@ -132,3 +132,196 @@ List of Available Endpoints:
   "message": "string"
 }
 ```
+
+### GET /matches
+
+#### Description
+
+- Create new category
+
+#### Request :
+
+- Method : GET
+- Header :
+    - access_token : string
+- Query :
+    - location : string
+    - categoryId : integer
+    - date : string
+
+#### Response :
+
+200 - OK
+
+```json
+
+[
+  {
+    "id": 1,
+    "name": "Main basket hari minggu jam 7 malam",
+    "location": "Jakarta Selatan",
+    "date": "2004-10-19T10:23:54.000Z",
+    "CategoryId": 2,
+    "capacity": 10,
+    "currentCapacity": 3,
+    "status": 1,
+    "createdAt": "2022-10-06T15:52:27.422Z",
+    "updatedAt": "2022-10-06T16:47:07.676Z"
+  },
+  {
+    "id": 3,
+    "name": "sepakbola hore",
+    "location": "manaaja",
+    "date": "2022-10-06T06:00:00.000Z",
+    "CategoryId": 1,
+    "capacity": 20,
+    "currentCapacity": 1,
+    "status": 1,
+    "createdAt": "2022-10-06T16:54:03.356Z",
+    "updatedAt": "2022-10-06T16:54:03.356Z"
+  }, ...
+]
+```
+
+401 - Unauthorized
+
+```json
+{
+  "message": "string"
+}
+```
+
+### GET /matches/:matchId
+
+#### Description
+
+- Create new category
+
+#### Request :
+
+- Method : GET
+- Header :
+    - access_token : string
+- Params :
+    - matchId : integer
+
+#### Response :
+
+200 - OK
+
+```json
+{
+  "id": 1,
+  "name": "Main basket hari minggu jam 7 malam",
+  "location": "Jakarta Selatan",
+  "date": "2004-10-19T10:23:54.000Z",
+  "CategoryId": 2,
+  "capacity": 10,
+  "currentCapacity": 3,
+  "status": 1,
+  "createdAt": "2022-10-06T15:52:27.422Z",
+  "updatedAt": "2022-10-06T16:47:07.676Z"
+}
+```
+
+401 - Unauthorized
+
+```json
+{
+  "message": "string"
+}
+```
+
+
+404 - Not Found
+
+```json
+{
+  "message": "Match not found"
+}
+```
+
+### PATCH /matches/:matchId
+
+#### Description
+
+- Create new category
+
+#### Request :
+
+- Method : GET
+- Header :
+    - access_token : string
+- Params :
+    - matchId : integer
+- Body :
+    - status : integer
+
+#### Response :
+
+204 - No Content
+
+401 - Unauthorized
+
+```json
+{
+  "message": "string"
+}
+```
+
+404 - Not Found
+
+```json
+
+{
+  "message": "Match not found"
+}
+```
+
+### POST /matches
+
+#### Description
+
+- Create new match
+
+#### Request :
+
+- Method : GET
+- Header :
+    - access_token : string
+- Body :
+
+```json
+{
+  "name": "String",
+  "location": "String",
+  "date": "String",
+  "CategoryId": "Integer",
+  "capacity": "Integer",
+  "currentCapacity": "Integer",
+  "status": "Integer",
+  "createdAt": "String",
+  "updatedAt": "String"
+}
+```
+
+#### Response :
+
+204 - No Content
+
+401 - Unauthorized
+
+```json
+{
+  "message": "string"
+}
+```
+
+404 - Not Found
+
+```json
+
+{
+  "message": "Match not found"
+}
+```
